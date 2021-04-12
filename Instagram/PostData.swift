@@ -15,6 +15,8 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
+    var comment: String? = nil
+    var commentname: String? = nil
 
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
@@ -24,6 +26,10 @@ class PostData: NSObject {
         self.name = postDic["name"] as? String
 
         self.caption = postDic["caption"] as? String
+        
+        self.comment = postDic["comment"] as? String
+        
+        self.commentname = postDic["commentname"] as? String
 
         let timestamp = postDic["date"] as? Timestamp
         self.date = timestamp?.dateValue()
