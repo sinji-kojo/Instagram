@@ -117,10 +117,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath!.row]
-
+        print(postData.id)
+        
         let storyboard = UIStoryboard.init(name: "Comment", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CommentViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         vc.modalPresentationStyle = .fullScreen
+        vc.postid = postData.id
         self.present(vc, animated: true, completion: nil)
     }
 }
