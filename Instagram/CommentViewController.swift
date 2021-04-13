@@ -14,8 +14,9 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var commentSendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
-    var outputValue : String?
-
+    
+    var postid = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,8 +24,8 @@ class CommentViewController: UIViewController {
         cancelButton.layer.cornerRadius = 10
     }
     @IBAction func commentSendButton(_ sender: Any) {
-
-        let postRef = Firestore.firestore().collection(Const.PostPath).document(outputValue!)
+        
+        let postRef = Firestore.firestore().collection(Const.PostPath).document(postid)
         // HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
         let postDic = [
@@ -43,7 +44,4 @@ class CommentViewController: UIViewController {
         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
  
     }
-    
-    
-    
 }

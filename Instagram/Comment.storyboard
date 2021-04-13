@@ -30,6 +30,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-eE-aiN">
                                 <rect key="frame" x="85" y="74" width="120" height="34"/>
+                                <color key="backgroundColor" red="0.8450814995" green="1" blue="0.8453935038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="A4K-pK-k2R"/>
                                 </constraints>
@@ -38,6 +39,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zvc-bn-DDk">
                                 <rect key="frame" x="130" y="148" width="250" height="34"/>
+                                <color key="backgroundColor" red="0.8450814995" green="1" blue="0.8453935038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="FDp-D6-bYK"/>
                                 </constraints>
