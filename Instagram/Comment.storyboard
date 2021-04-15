@@ -16,29 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2j-dI-w9w">
-                                <rect key="frame" x="30" y="84" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJE-g7-Ka2">
                                 <rect key="frame" x="30" y="155" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-eE-aiN">
-                                <rect key="frame" x="85" y="74" width="120" height="34"/>
-                                <color key="backgroundColor" red="0.8450814995" green="1" blue="0.8453935038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="A4K-pK-k2R"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zvc-bn-DDk">
-                                <rect key="frame" x="130" y="148" width="250" height="34"/>
+                                <rect key="frame" x="130" y="148.5" width="250" height="34"/>
                                 <color key="backgroundColor" red="0.8450814995" green="1" blue="0.8453935038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="FDp-D6-bYK"/>
@@ -47,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHD-ZH-GQ6">
-                                <rect key="frame" x="107" y="232" width="200" height="34"/>
+                                <rect key="frame" x="107" y="232.5" width="200" height="34"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="BA1-Th-mS5"/>
@@ -61,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTo-T5-BNf">
-                                <rect key="frame" x="107" y="296" width="200" height="34"/>
+                                <rect key="frame" x="107" y="296.5" width="200" height="34"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="OrG-9z-tZq"/>
@@ -81,15 +66,11 @@
                             <constraint firstItem="JTo-T5-BNf" firstAttribute="top" secondItem="wHD-ZH-GQ6" secondAttribute="bottom" constant="30" id="444-MM-2fc"/>
                             <constraint firstItem="wHD-ZH-GQ6" firstAttribute="centerX" secondItem="esn-hc-OPb" secondAttribute="centerX" id="65m-K8-JtX"/>
                             <constraint firstItem="Zvc-bn-DDk" firstAttribute="leading" secondItem="rJE-g7-Ka2" secondAttribute="trailing" constant="30" id="I2R-xk-Pee"/>
-                            <constraint firstItem="4eU-eE-aiN" firstAttribute="top" secondItem="Kvw-Vx-lNN" secondAttribute="top" constant="30" id="Kle-Vw-7y0"/>
-                            <constraint firstItem="Zvc-bn-DDk" firstAttribute="top" secondItem="4eU-eE-aiN" secondAttribute="bottom" constant="40" id="Ov9-E8-d5H"/>
+                            <constraint firstItem="rJE-g7-Ka2" firstAttribute="top" secondItem="Kvw-Vx-lNN" secondAttribute="top" constant="111" id="Ogm-nM-EvB"/>
                             <constraint firstItem="wHD-ZH-GQ6" firstAttribute="top" secondItem="Zvc-bn-DDk" secondAttribute="bottom" constant="50" id="R99-ep-YQu"/>
+                            <constraint firstItem="rJE-g7-Ka2" firstAttribute="centerY" secondItem="Zvc-bn-DDk" secondAttribute="centerY" id="SNL-SF-9Oe"/>
                             <constraint firstItem="rJE-g7-Ka2" firstAttribute="leading" secondItem="Kvw-Vx-lNN" secondAttribute="leading" constant="30" id="TrS-Nb-M8C"/>
-                            <constraint firstItem="rJE-g7-Ka2" firstAttribute="top" secondItem="V2j-dI-w9w" secondAttribute="bottom" constant="50" id="XVx-KQ-3jj"/>
-                            <constraint firstItem="V2j-dI-w9w" firstAttribute="top" secondItem="Kvw-Vx-lNN" secondAttribute="top" constant="40" id="duJ-cD-V2A"/>
-                            <constraint firstItem="4eU-eE-aiN" firstAttribute="leading" secondItem="V2j-dI-w9w" secondAttribute="trailing" constant="20" id="gdJ-eQ-H9o"/>
                             <constraint firstItem="JTo-T5-BNf" firstAttribute="centerX" secondItem="esn-hc-OPb" secondAttribute="centerX" id="k3b-nZ-jp4"/>
-                            <constraint firstItem="V2j-dI-w9w" firstAttribute="leading" secondItem="Kvw-Vx-lNN" secondAttribute="leading" constant="30" id="nbM-2a-qDH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="opk-mD-I6S"/>
@@ -97,7 +78,6 @@
                         <outlet property="cancelButton" destination="JTo-T5-BNf" id="MKW-1S-hX7"/>
                         <outlet property="commentSendButton" destination="wHD-ZH-GQ6" id="YQP-wB-Xai"/>
                         <outlet property="commentTextField" destination="Zvc-bn-DDk" id="wCi-xY-Vn7"/>
-                        <outlet property="commentnameTextField" destination="4eU-eE-aiN" id="c7Q-xN-Aby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awh-4V-AZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

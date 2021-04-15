@@ -28,13 +28,14 @@ class CommentViewController: UIViewController {
         let postRef = Firestore.firestore().collection(Const.PostPath).document(postid)
         // HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
-        let postDic = [
-            "commentname": self.commentnameTextField.text!,
-            "comment": self.commentTextField.text!,
-            ] as [String : Any]
-        postRef.updateData(postDic)
+        //
+        let commentname = Auth.auth().currentUser?.displayName
+        let updateValue1 = FieldValue.arrayUnion([commentname!])
+        postRef.updateData(["commentname": updateValue1])
 
-        print(postDic)
+        let comment =  self.commentTextField.text!
+        let updateValue2 = FieldValue.arrayUnion([comment])
+        postRef.updateData(["comment": updateValue2])
         // HUDで投稿完了を表示する
         SVProgressHUD.showSuccess(withStatus: "コメント投稿しました")
         // 投稿処理が完了したので先頭画面に戻る

@@ -61,11 +61,11 @@ class PostTableViewCell: UITableViewCell {
             self.likeButton.setImage(buttonImage, for: .normal)
         }
         // コメントの表示
-        if postData.commentname == nil || postData.comment == nil {
-            return
-        }
-        else {
-            self.commentLabel.text = "\(postData.commentname!) : \(postData.comment!)"
-        }
+//        if postData.commentname == nil || postData.comment == nil {
+//            return
+//        }
+//        else {
+//            self.commentLabel.text = "\(postData.commentname!) : \(postData.comment!)"
+//        }
     }
 }
