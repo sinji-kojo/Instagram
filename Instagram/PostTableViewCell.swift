@@ -15,10 +15,12 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentLabel: UILabel!
     
-    
+    var indexid = 0
+    var arr: [String] = []
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -47,11 +49,9 @@ class PostTableViewCell: UITableViewCell {
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
         }
-
         // いいね数の表示
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
-
         // いいねボタンの表示
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")
@@ -61,11 +61,21 @@ class PostTableViewCell: UITableViewCell {
             self.likeButton.setImage(buttonImage, for: .normal)
         }
         // コメントの表示
-//        if postData.commentname == nil || postData.comment == nil {
-//            return
-//        }
-//        else {
-//            self.commentLabel.text = "\(postData.commentname!) : \(postData.comment!)"
-//        }
+        let commentNumber = postData.comment.count
+        if commentNumber == 0  {
+            commentLabel.text = ""
+            return
+        }
+        else {
+            while indexid < postData.comment.count {
+                commentLabel.text = ""
+                let commenttext = "\(postData.commentname[indexid]) : \(postData.comment[indexid])"
+                arr.append(commenttext)
+                let str = arr.joined(separator: ",")
+                let newStr = str.replacingOccurrences(of: ",", with: "\n")
+                commentLabel.text = newStr
+                indexid += 1
+            }
+        }
     }
 }

@@ -23,10 +23,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zvc-bn-DDk">
-                                <rect key="frame" x="130" y="148.5" width="250" height="34"/>
+                                <rect key="frame" x="130" y="148.5" width="200" height="34"/>
                                 <color key="backgroundColor" red="0.8450814995" green="1" blue="0.8453935038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="FDp-D6-bYK"/>
+                                    <constraint firstAttribute="width" constant="200" id="FDp-D6-bYK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("DEBUG_PRINT: viewWillAppear")
+//        print("DEBUG_PRINT: viewWillAppear")
         // ログイン済みか確認
         if Auth.auth().currentUser != nil {
             // listenerを登録して投稿データの更新を監視する
@@ -117,8 +117,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath!.row]
-        print(postData.id)
-        
         let storyboard = UIStoryboard.init(name: "Comment", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         vc.modalPresentationStyle = .fullScreen

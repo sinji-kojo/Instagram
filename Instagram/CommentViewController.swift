@@ -10,7 +10,6 @@ import Firebase
 import SVProgressHUD
 
 class CommentViewController: UIViewController {
-    @IBOutlet weak var commentnameTextField: UITextField!
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var commentSendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
@@ -32,7 +31,6 @@ class CommentViewController: UIViewController {
         let commentname = Auth.auth().currentUser?.displayName
         let updateValue1 = FieldValue.arrayUnion([commentname!])
         postRef.updateData(["commentname": updateValue1])
-
         let comment =  self.commentTextField.text!
         let updateValue2 = FieldValue.arrayUnion([comment])
         postRef.updateData(["comment": updateValue2])
@@ -43,6 +41,6 @@ class CommentViewController: UIViewController {
     }
     @IBAction func cancelButton(_ sender: Any) {
         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
- 
+
     }
 }
