@@ -69,7 +69,7 @@ class PostTableViewCell: UITableViewCell {
         else {
             while indexid < postData.comment.count {
                 commentLabel.text = ""
-                let commenttext = "\(postData.commentname[indexid]) : \(postData.comment[indexid])"
+                let commenttext = postData.comment[indexid]
                 arr.append(commenttext)
                 let str = arr.joined(separator: ",")
                 let newStr = str.replacingOccurrences(of: ",", with: "\n")
