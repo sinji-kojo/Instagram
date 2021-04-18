@@ -28,12 +28,12 @@ class CommentViewController: UIViewController {
         // HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
         //
-        let commentname = Auth.auth().currentUser?.displayName
-        let updateValue1 = FieldValue.arrayUnion([commentname!])
-        postRef.updateData(["commentname": updateValue1])
+        guard  let commentname = Auth.auth().currentUser?.displayName  else { return }
         let comment =  self.commentTextField.text!
-        let updateValue2 = FieldValue.arrayUnion([comment])
-        postRef.updateData(["comment": updateValue2])
+        let commentc = "："
+        let commentFirebase = ( commentname + commentc + comment )
+        let updateValue = FieldValue.arrayUnion([commentFirebase])
+        postRef.updateData(["comment": updateValue])
         // HUDで投稿完了を表示する
         SVProgressHUD.showSuccess(withStatus: "コメント投稿しました")
         // 投稿処理が完了したので先頭画面に戻る
